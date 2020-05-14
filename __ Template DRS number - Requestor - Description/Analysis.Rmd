@@ -1,0 +1,147 @@
+---
+title: "DRS 0000 Analysis: A Title of Some Sort"
+author: "Jake Roden-Foreman"
+date: "`r Sys.time()`"
+output:
+  html_document:
+    pandoc_args: "--dpi=200"
+    fig_height: 3
+    fig_width: 5
+    code_folding: show
+    df_print: kable
+    toc: true
+    toc_depth: 1
+    toc_float: true
+knit: (function(inputFile, encoding) { 
+      rmarkdown::render(inputFile,
+                        encoding=encoding, 
+                        output_file=file.path(dirname(inputFile), "Write ups and reports", 'Analysis.html')) })
+---
+
+#### `r getwd()`
+\
+\
+
+
+# Request Details {.tabset}
+
+## Request Information  
+ID:  
+Status:   
+Request Date:  
+Required by date:  
+Details:  
+Purpose:  
+Attachment:  
+Previous Assignee:  
+Decision making changes: 
+
+
+
+## Requester Information  
+Requester's Name:  
+Requester's Capacity:  
+Phone:  
+Email:  
+Address:  
+Preferred Contact Method:  
+
+# ---
+
+\
+\
+\
+\
+\
+
+
+
+
+# Analysis {.tabset}
+
+## 1: Setup, Import, and Clean 
+```{r}
+knitr::opts_chunk$set(echo = TRUE, results = "asis")
+options(kableExtra.auto_format = FALSE) #for proper table formating in Word
+suppressMessages(library(tidyverse))
+suppressMessages(library(tidylog))
+suppressMessages(library(data.table))
+
+
+
+```
+
+\
+\
+\
+\
+
+
+## 2: Calculations
+```{r}
+
+
+
+```
+
+
+\
+\
+\
+\
+\
+\
+
+
+# Results
+```{r}
+
+
+
+```
+
+
+
+
+
+
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\
+\
+\
+\
+\
+\
+
+
+
+# ---
+
+# Session Information
+<style>
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+</style>
+
+<div class="footer">
+
+```{r}
+
+pander::pander(sessionInfo())
+
+```
+
+</div>
